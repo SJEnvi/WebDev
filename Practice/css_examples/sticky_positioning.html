@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello world!</title>
+    <style>
+.parent{
+    background:lightcoral;
+    padding: 30px;
+    width: 3000px;
+    height: 3000px;
+}
+.child{
+    background: lightgreen;
+    color: brown;
+    padding: 30px;
+    height: 2000px;
+    width: 1500px;
+}
+.box{
+    background: brown;
+    padding: 10px;
+    border: 10px dotted blue;
+    text-align: center;
+    color: black;
+    font: bold 2rem courier;
+    width: 150px;
+
+}
+    </style>
+  </head>
+  <body>
+<div class="parent">
+<div class="child" style="position: relative; top: 150px; left: 300px;">
+<p style="display: inline-block; height: 500px; width: 500px; border: solid 5px magenta; font-size: 100px;">Sample paragraph text</p>
+  <div class="box" style="display: inline-block; position: sticky; top: 50px; left: 50px; bottom: 50px; right: 50px;">
+    Sticky
+</div>
+</div>
+</div>
+  </body>
+</html>

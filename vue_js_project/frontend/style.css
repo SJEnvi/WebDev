@@ -1,0 +1,184 @@
+@keyframes invalidInputAnimation{
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-4deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(4deg);}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+:root{
+    font-family: 'Source Sans Pro';
+    --primary-color: rgb(89,71,87);
+    --secondary-color: #b6cef3;
+    --header-display: "block";
+    background-image: url('background.jpg');
+    background-size: 100%;
+    font-size: calc(15px + .5vw);
+}
+
+
+#app, #nameForm {
+    margin: 10px auto;
+    width: 90vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app{
+    background: rgba(242,242,242,0.95);
+    border-radius: 4%;
+    overflow: hidden;
+    height: auto;
+    padding: 20px;
+}
+
+
+@media screen and (min-width: 992px){
+    #movieDetails{
+        display: grid;
+        margin: 1% auto;
+        width: 90vw;
+        grid-template-columns: minmax(90px, 3fr) minmax(90px, 4fr);
+        grid-template-rows: repeat(5, 50px);
+        grid-gap: 5px;
+        padding: 5px;
+    }
+
+    #poster{
+        grid-row: 1/-1;
+        grid-column: 1;
+        height: 450px;
+        border-radius: 10px;
+        justify-self: center;
+    }
+
+    #movieTitle{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #overallRating{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #relaseDate{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #starRating{
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #movieNavButtons{
+        grid-column: 2;
+        grid-row: 5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+
+    #movieOverview{
+        grid-column: 2/-1;
+    }
+}
+
+button{
+    margin: 2px 10px;
+    border: 2px var(--primary-color) solid;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+    #movieDetails{
+        display: flex;
+        margin: 5% auto;
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #poster{
+        width:50%;
+        border-radius: 10px;
+        justify-self: center;
+    }
+    #movieNavButtons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    #movieTitle{
+        padding: 5px;
+    }
+
+    #header{
+        display: var(--header-display, "block");
+    }
+
+}
+
+.normalNicknameField{
+  border-radius: 5px;
+  height: 30px;
+  border: 2px black solid;
+  margin: 10px;
+}
+
+.invalidNicknameField{
+    border: 3px red solid;
+    animation-name: invalidInputAnimation;
+    animation-duration: .5s;
+    animation-iteration-count: 3;
+}
+
+.loader {
+    border: 3vmin solid #f3f3f3; /* Light grey */
+    border-top: 3vmin solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 10vmin;
+    height: 10vmin;
+    animation: spin 2s linear infinite;
+}
+
+
+
+#nameInput{
+    font-size: 1rem;
+}
+
+.small{
+    font-size: 80%;
+    font-style: italic;
+}
+.overviewSpan{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#movieOverview{
+    padding: 10px;
+    width: 90%;
+    margin: initial auto;
+}
+
+#movieRateArea{
+    background: rgba(242,242,242);
+    border: 1px solid var(--primary-color); 
+    border-radius: 10px;
+}

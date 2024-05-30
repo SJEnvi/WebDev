@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie kolejne!</title>
+    <style>
+        a[target]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>The CSS selector a[target] makes sure that all links with a target attribute gets a yellow background</p>
+
+    <a href="https://www.w3schools.com">w3schools.com</a>
+    <a href="http://www.disney.com" target="_blank">Disney.com</a>
+    <a href="http://www.wikipedia.org" target="_top">Wikipedia</a>
+    <a href="kawa.jpg" download="kawa.jpg"><img src="kawa.jpg"></a>
+
+    <p>Click the button to add a red border to the first link that has a target attribute.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction(){
+
+document.querySelector("a[target]").style.border = "10px solid red";
+        }
+    </script>
+</body>
+</html>

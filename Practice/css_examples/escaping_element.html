@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+p{
+    width: 10vmin;
+    height: 10vmin;
+    font-size: 2vmin;
+    color: blue;
+    font-weight: 700;
+    background-color: red;
+    border: solid 5px black;
+    position: absolute;
+}
+        </style>
+    </head>
+<body >
+
+<p onmouseover="runFromCursor()" onmouseout="changeDirection()"id="runBox"> Don't touch me</p>
+<script>
+const box = document.getElementById("runBox")
+let x_dir = 1
+let y_dir = 1
+
+let x_pos = 0
+let y_pos = 0
+
+let interval;
+
+function moveCursor(){
+  x_pos += x_dir
+  y_pos += y_dir
+  box.style.top = y_pos + "px";
+  box.style.left = x_pos + "px";
+  if (x_pos > window.screen.width) x_pos = 0;
+  if (y_pos > window.screen.height) y_pos = 0;
+}
+
+function runFromCursor() {
+  interval = setInterval(moveCursor, 1)
+}
+
+function changeDirection(){
+    clearInterval(interval)
+    x_dir = Math.sign(Math.random() - 0.5)
+    y_dir = Math.sign(Math.random() - 0.5)
+}
+
+</script>
+
+</body>
+</html>
