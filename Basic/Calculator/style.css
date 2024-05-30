@@ -1,0 +1,29 @@
+body{
+    background-color: tomato;
+}
+
+input{
+    width: 150px;
+    height: 100px;
+    font-size: 75px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: violet;
+    color: wheat;
+    border-style: none;
+
+}
+
+#myForm{
+    margin-left: 225px;
+    margin-top: 20px;
+
+}
+
+h1{
+    color: indigo;
+    text-align: center;
+    font-size: 80px;
+    margin-right: 150px;
+    margin-top: 20px;
+}

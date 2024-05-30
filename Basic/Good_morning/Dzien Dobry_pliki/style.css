@@ -1,0 +1,58 @@
+body {
+  background-color: aqua;
+}
+
+#clock {
+  color: red;
+  font-size: 40px;
+  background-color: blanchedalmond;
+  padding: 0.5em 0em;
+  width: 40%;
+  margin: 0px auto;
+  font-family: Arial, Helvetica;
+  text-align: center;
+}
+
+#banner {
+  color: blueviolet;
+  font-size: 50px;
+  text-align: center;
+  background-color: chartreuse;
+  padding: 0.5em 0em;
+  width: 80%;
+  margin: 10% auto 0%;
+  font-family: Helvetica;
+  text-transform: uppercase;
+}
+span {
+  margin-right: 175px;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#wylosowanaLiczba {
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  border: violet;
+  border-width: 3px;
+}
+
+#ramka {
+  position: relative;
+}
+
+#animate {
+  position: absolute;
+}
+
+#congrats {
+  margin-left: -450px;
+  width: 450px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
